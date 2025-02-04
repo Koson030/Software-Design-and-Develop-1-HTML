@@ -32,8 +32,40 @@
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
 [วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+    <div><h2>ชื่อ-นามสกุล</h2>
+        <font size="4"><p>นายโกศล เพ็งพิพัฒน์</p></font>
+        <hr>
+    </div>
+   
+    <div><h2>ประวัติการศึกษา</h2>
+        <font size="4"><p>จบจากเตรียมอุดมศึกษาน้อเกล้า สมุทรปราการ</p></font>
+        <hr>
+    </div>   
+
+    <div><h2>งานอดิเรก</h2>
+        <font size="4">
+            <pre>
+                เล่นเกม
+                ฟังเพลง
+                นอน 
+            </pre>
+           </font>
+        <hr>
+    </div>   
+
+    <div><h2>เป้าหมายในอนาคต</h2>
+        <font size="4"><p>จะไปเป็นครูที่มีคุณภาพ เพื่อสอนเหล่าเด็กในอนาคตของชาติ</p></font>
+        <hr>
+    </div>
 ```
 - ภาพผลลัพธ์:
 [วางภาพ screenshot ที่นี่]
+![image](https://github.com/user-attachments/assets/3c739944-1f3c-4fb9-aafb-362c701c48bb)
 
 
