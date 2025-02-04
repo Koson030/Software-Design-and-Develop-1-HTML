@@ -165,10 +165,74 @@
 ### บันทึกผลการทดลอง
 - รหัสเอกสาร HTML ที่เขียน:
 ```html
-[วางโค้ด HTML ที่นี่]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กระเป๋าน่าสนใจ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><center>แกลเลอรีสินค้า</h1></center>
+    </header>
+
+    <main>
+        
+                <center><a href="images/products/product01.jpg">
+                    <img src="images/products/product01.jpg" 
+                        alt="คลิกเพื่อดูรูปขนาดใหญ่"
+                        width="200">
+                </a>
+                <p>กระเป๋าทรงสวยสบายใจวัยรุ่น สีดำ</p>
+                <p>ราคา 1,300 บาท </p>
+                </center><hr>
+           
+                <center><a href="images/products/product02.jpg">
+                    <img src="images/products/product02.jpg" 
+                        alt="คลิกเพื่อดูรูปขนาดใหญ่"
+                        width="200">
+                </a>
+                <p>กระเป๋าทรงสวยสบายใจวัยรุ่นยุคใหม่ สีดำ</p>
+                <p>ราคา 1,450 บาท </p>
+                </center><hr>
+        
+                <center><a href="images/products/product03.jpg">
+                    <img src="images/products/product03.jpg" 
+                        alt="คลิกเพื่อดูรูปขนาดใหญ่"
+                        width="200">
+                </a>
+                <p>กระเป๋าทรงสวยสบายใจวัยรุ่น สีขาว</p>
+                <p>ราคา 1,900 บาท </p>
+                </center><hr>
+
+                <center><a href="images/products/product04.jpg">
+                    <img src="images/products/product04.jpg" 
+                        alt="คลิกเพื่อดูรูปขนาดใหญ่"
+                        width="200">
+                </a>
+                <p>กระเป๋ารุ่นลิมิเต็ต สีขาว</p>
+                <p>ราคา 1,350 บาท </p>
+                </center><hr>
+
+        <center><button id="back-to-top">กลับด้านบน</button></center>
+    </main>
+
+    <script>
+        // สคริปต์ปุ่มกลับด้านบน
+        document.getElementById("back-to-top").addEventListener("click", function() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+</body>
+</html>
+
 ```
 - ภาพผลลัพธ์:
 [วางภาพ screenshot ที่นี่]
+![image](https://github.com/user-attachments/assets/5ef2722c-7f80-4c14-a4a8-88587fdb69eb)
+![image](https://github.com/user-attachments/assets/83acfb61-a2f2-443b-b74a-f8b507d8bfa7)
 
 
 
