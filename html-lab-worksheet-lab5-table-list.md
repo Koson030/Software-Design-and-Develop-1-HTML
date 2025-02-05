@@ -42,7 +42,6 @@
     <li>Unordered item 1</li>
     <li>Unordered item 2</li>
 </ul>
-
 <ol>
     <li>Ordered item 1</li>
     <li>Ordered item 2</li>
@@ -132,7 +131,6 @@
             <td>67030030@kmitl.ac.th</td>
         </tr>
     </table>
-
     <h2 style="text-align: center;">เมนูอาหาร</h2>
     <table>
         <tr>
