@@ -223,11 +223,173 @@
 
 ### บันทึกผลการทดลอง
 [วางโค้ด HTML ที่นี่]
-```html
+```<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .required-mark {
+            color: red;
+            margin-left: 5px;
+        }
+
+        .form-group label {
+            display: block;
+        }
+
+        button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>ข้อมูลส่วนตัว</legend>
+
+            <div class="form-group">
+                <label for="firstName">ชื่อ:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">นามสกุล:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">วันเกิด:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+
+            <div class="form-group">
+                <label>เพศ:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">ชาย</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">หญิง</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ข้อมูลการติดต่อ</legend>
+
+            <div class="form-group">
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">เบอร์โทรศัพท์:</label>
+                <input type="tel" id="phone" name="phone" 
+                       pattern="[0-9]{10}" 
+                       title="กรุณากรอกเบอร์โทรศัพท์ 10 หลัก" 
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">ที่อยู่จัดส่ง:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>รูปโปรไฟล์</legend>
+
+            <div class="form-group">
+                <label for="profilePic">อัพโหลดรูปโปรไฟล์:</label>
+                <input type="file" id="profilePic" name="profilePic" 
+                       accept="image/*" 
+                       required>
+                <small>(ไฟล์ต้องมีขนาดไม่เกิน 2MB)</small>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>การยืนยันรหัสผ่าน</legend>
+
+            <div class="form-group">
+                <label for="password">รหัสผ่าน:</label>
+                <input type="password" id="password" name="password" 
+                       minlength="8" 
+                       title="รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร" 
+                       required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">ยืนยันรหัสผ่าน:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" 
+                       minlength="8" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>ความสนใจในหมวดหมู่สินค้า</legend>
+
+            <div class="form-group">
+                <label>ความสนใจ:</label>
+                <input type="checkbox" id="electronics" name="interests" value="electronics">
+                <label for="electronics">อิเล็กทรอนิกส์</label>
+                <input type="checkbox" id="fashion" name="interests" value="fashion">
+                <label for="fashion">แฟชั่น</label>
+                <input type="checkbox" id="home" name="interests" value="home">
+                <label for="home">ของใช้ในบ้าน</label>
+                <input type="checkbox" id="books" name="interests" value="books">
+                <label for="books">หนังสือ</label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>การยืนยัน</legend>
+
+            <div class="form-group">
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">ข้าพเจ้ายอมรับเงื่อนไขการใช้งาน</label>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <button type="submit">สมัครสมาชิก</button>
+            <button type="reset">ล้างข้อมูล</button>
+        </div>
+    </form>
+
+    <script>
+        document.getElementById('profilePic').addEventListener('change', function () {
+            const file = this.files[0];
+            if (file.size > 2 * 1024 * 1024) {
+                alert('ไฟล์รูปภาพต้องมีขนาดไม่เกิน 2MB');
+                this.value = '';
+            }
+        });
+
+        document.getElementById('confirmPassword').addEventListener('input', function () {
+            const password = document.getElementById('password').value;
+            if (this.value !== password) {
+                this.setCustomValidity('รหัสผ่านไม่ตรงกัน');
+            } else {
+                this.setCustomValidity('');
+            }
+        });
+    </script>
+</body>
+</html>
 
 ```
 - ภาพผลลัพธ์:
 [วางภาพ screenshot ที่นี่]
+![image](https://github.com/user-attachments/assets/25d1e54a-12a8-4572-a5bc-cf960d86b882)
 
 
 
