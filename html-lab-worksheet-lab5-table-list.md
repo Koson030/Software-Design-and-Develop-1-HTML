@@ -66,7 +66,7 @@
 1. สร้างตารางแสดงข้อมูลส่วนตัว
 2. สร้างรายการเมนูอาหาร
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
